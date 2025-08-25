@@ -1,0 +1,89 @@
+<div class="container">
+  <header class="header">
+    <h1>Web technologies</h1>
+    <div class="controls">
+      <button mat-button [matMenuTriggerFor]="sortMenu">
+        {{ currentSortLabel() }}
+        <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+      <mat-menu #sortMenu="matMenu">
+        @for (option of sortOptions | keyvalue; track option.key) {
+          <button mat-menu-item 
+                  (click)="setSortBy(option.key)" 
+                  [class.active-sort]="sortBy() === option.key">
+            {{ option.value }}
+          </button>
+        }
+      </mat-menu>
+    </div>
+  </header>
+
+  <div class="filters-container">
+    <div class="filters">
+      @for (filter of filterConfigs; track filter.key) {
+        <app-filter-dropdown 
+          [label]="filter.label" 
+          [options]="filter.options"
+          [activeOptions]="activeFilters()[filter.key] || []" 
+          (apply)="applyFilter(filter.key, $event)">
+        </app-filter-dropdown>
+      }
+      <button class="filter-btn clear" (click)="clearFilters()">Clear all</button>
+    </div>
+
+    <div class="search-container">
+      <input type="text" 
+             class="search-input" 
+             placeholder="Search..." 
+             [(ngModel)]="searchTerm">
+      <button class="search-btn">
+        <i class="material-icons">search</i>
+      </button>
+    </div>
+  </div>
+
+  <main class="tech-list">
+    @if (loading()) {
+      <div class="spinner-container">
+        <mat-spinner></mat-spinner>
+      </div>
+    }
+    
+    @for (tech of sortedAndFilteredTechnologies(); track tech.name) {
+      <div class="technology-card">
+        <div class="card-content">
+          <h2>{{ tech.name }}</h2>
+          <div class="details">
+            <span>Usage: <strong>{{ tech.usage | titlecase }}</strong></span>
+            <span>Difficulty: <strong>{{ tech.difficulty | titlecase }}</strong></span>
+            <span>Popularity: <strong>{{ tech.popularity | titlecase }}</strong></span>
+            <span>First release: <strong>{{ tech.firstRelease }}</strong></span>
+            <span>Typescript: <strong>{{ tech.typescript ? 'Yes' : 'No' }}</strong></span>
+          </div>
+          <p class="description">{{ tech.description }}</p>
+        </div>
+        <a mat-flat-button 
+           color="primary" 
+           [routerLink]="['/edit', tech.name]">
+          Edit technology
+        </a>
+      </div>
+    } @empty {
+      <div class="empty-state">
+        <p>No technologies match your criteria.</p>
+      </div>
+    }
+  </main>
+
+  <footer class="footer">
+    <button class="action-btn create-btn" routerLink="/create">
+      Create technology
+    </button>
+  </footer>
+</div>
+
+@if (error()) {
+  <div class="error-message">
+    Error: {{ error()?.message }}
+  </div>
+}

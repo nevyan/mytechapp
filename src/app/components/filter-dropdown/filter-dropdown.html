@@ -1,0 +1,25 @@
+<div class="filter-dropdown-container">
+    <button class="filter-btn" (click)="toggleDropdown()" [class.active]="activeOptions.length > 0">
+        {{ label }}
+        @if (activeOptions.length > 0) {
+            <span class="filter-count">{{ activeOptions.length }}</span>
+        }
+    </button>
+
+    @if (isOpen()) {
+    <div class="dropdown-panel" (click)="$event.stopPropagation()">
+        <div class="options-list">
+            @for(option of options; track option) {
+            <label class="option-item">
+                <input type="checkbox" [(ngModel)]="selectedOptions[option]" />
+                {{ option }}
+            </label>
+            }
+        </div>
+        <div class="dropdown-actions">
+            <button class="action-clear" (click)="clearSelection()">Clear</button>
+            <button class="action-apply" (click)="applyFilters()">Apply</button>
+        </div>
+    </div>
+    }
+</div>

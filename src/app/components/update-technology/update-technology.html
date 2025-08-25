@@ -1,0 +1,63 @@
+@if (technology()) {
+<div class="form-container">
+  <h2>Update Technology</h2>
+
+  <form [formGroup]="technologyForm" (ngSubmit)="updateTechnology()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" type="text" formControlName="name">
+    </div>
+
+    <div class="form-group">
+      <label for="usage">Usage</label>
+      <select id="usage" formControlName="usage">
+        <option value="frontend">Front-end</option>
+        <option value="backend">Back-end</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="difficulty">Difficulty</label>
+      <select id="difficulty" formControlName="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="popularity">Popularity</label>
+      <select id="popularity" formControlName="popularity">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="firstRelease">First release</label>
+      <input id="firstRelease" type="number" formControlName="firstRelease">
+    </div>
+
+    <div class="form-group">
+      <label for="typescript">Typescript</label>
+      <select id="typescript" formControlName="typescript">
+        <option [ngValue]="true">Yes</option>
+        <option [ngValue]="false">No</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea id="description" formControlName="description" rows="4"></textarea>
+    </div>
+
+    <div class="button-group">
+      <button type="button" class="button button-secondary" (click)="deleteTechnology()">Delete</button>
+      <button type="submit" class="button button-primary" [disabled]="technologyForm.invalid">Update</button>
+    </div>
+  </form>
+</div>
+}@else {
+  <p>Loading technology or technology not found...</p>
+}

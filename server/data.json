@@ -1,0 +1,227 @@
+[
+	{
+		"name": "Angular",
+		"usage": "frontend",
+		"difficulty": "hard",
+		"popularity": "high",
+		"firstRelease": 2010,
+		"typescript": true,
+		"description": "Full-featured framework for building complex web applications"
+	},
+	{
+		"name": "React",
+		"usage": "frontend",
+		"difficulty": "medium",
+		"popularity": "high",
+		"firstRelease": 2013,
+		"typescript": true,
+		"description": "Component-based library for building user interfaces"
+	},
+	{
+		"name": "Vue.js",
+		"usage": "frontend",
+		"difficulty": "easy",
+		"popularity": "high",
+		"firstRelease": 2014,
+		"typescript": true,
+		"description": "Progressive framework for building user interfaces"
+	},
+	{
+		"name": "Node.js",
+		"usage": "backend",
+		"difficulty": "medium",
+		"popularity": "high",
+		"firstRelease": 2009,
+		"typescript": true,
+		"description": "JavaScript runtime for server-side development"
+	},
+	{
+		"name": "Express.js",
+		"usage": "backend",
+		"difficulty": "easy",
+		"popularity": "high",
+		"firstRelease": 2010,
+		"typescript": true,
+		"description": "Minimal web framework for Node.js"
+	},
+	{
+		"name": "Next.js",
+		"usage": "full stack",
+		"difficulty": "medium",
+		"popularity": "high",
+		"firstRelease": 2016,
+		"typescript": true,
+		"description": "React framework with server-side rendering"
+	},
+	{
+		"name": "Nuxt.js",
+		"usage": "full stack",
+		"difficulty": "medium",
+		"popularity": "medium",
+		"firstRelease": 2016,
+		"typescript": true,
+		"description": "Vue.js framework with server-side rendering"
+	},
+	{
+		"name": "Svelte",
+		"usage": "frontend",
+		"difficulty": "easy",
+		"popularity": "medium",
+		"firstRelease": 2016,
+		"typescript": true,
+		"description": "Compile-time optimized framework with no virtual DOM"
+	},
+	{
+		"name": "Fastify",
+		"usage": "backend",
+		"difficulty": "medium",
+		"popularity": "medium",
+		"firstRelease": 2016,
+		"typescript": true,
+		"description": "Fast and low overhead web framework"
+	},
+	{
+		"name": "Gatsby",
+		"usage": "frontend",
+		"difficulty": "medium",
+		"popularity": "medium",
+		"firstRelease": 2015,
+		"typescript": true,
+		"description": "Static site generator for React"
+	},
+	{
+		"name": "Nest.js",
+		"usage": "backend",
+		"difficulty": "hard",
+		"popularity": "medium",
+		"firstRelease": 2017,
+		"typescript": true,
+		"description": "Enterprise-grade Node.js framework with decorators"
+	},
+	{
+		"name": "Ember.js",
+		"usage": "frontend",
+		"difficulty": "hard",
+		"popularity": "low",
+		"firstRelease": 2011,
+		"typescript": true,
+		"description": "Opinionated framework for ambitious web applications"
+	},
+	{
+		"name": "jQuery",
+		"usage": "frontend",
+		"difficulty": "easy",
+		"popularity": "medium",
+		"firstRelease": 2006,
+		"typescript": false,
+		"description": "Fast, small, and feature-rich JavaScript library"
+	},
+	{
+		"name": "Backbone.js",
+		"usage": "frontend",
+		"difficulty": "medium",
+		"popularity": "low",
+		"firstRelease": 2010,
+		"typescript": false,
+		"description": "Lightweight MVC framework for single-page applications"
+	},
+	{
+		"name": "Knockout.js",
+		"usage": "frontend",
+		"difficulty": "medium",
+		"popularity": "low",
+		"firstRelease": 2010,
+		"typescript": false,
+		"description": "MVVM framework with declarative bindings"
+	},
+	{
+		"name": "Meteor",
+		"usage": "full stack",
+		"difficulty": "medium",
+		"popularity": "low",
+		"firstRelease": 2012,
+		"typescript": false,
+		"description": "Full-stack platform for building web and mobile apps"
+	},
+	{
+		"name": "Hapi.js",
+		"usage": "backend",
+		"difficulty": "medium",
+		"popularity": "low",
+		"firstRelease": 2011,
+		"typescript": false,
+		"description": "Rich framework for building applications and services"
+	},
+	{
+		"name": "Koa.js",
+		"usage": "backend",
+		"difficulty": "medium",
+		"popularity": "medium",
+		"firstRelease": 2013,
+		"typescript": false,
+		"description": "Next generation web framework for Node.js"
+	},
+	{
+		"name": "Preact",
+		"usage": "frontend",
+		"difficulty": "easy",
+		"popularity": "medium",
+		"firstRelease": 2015,
+		"typescript": false,
+		"description": "Fast 3kB alternative to React with the same API"
+	},
+	{
+		"name": "Alpine.js",
+		"usage": "frontend",
+		"difficulty": "easy",
+		"popularity": "medium",
+		"firstRelease": 2019,
+		"typescript": false,
+		"description": "Minimal framework for composing JavaScript behavior"
+	},
+	{
+		"name": "Mithril.js",
+		"usage": "frontend",
+		"difficulty": "easy",
+		"popularity": "low",
+		"firstRelease": 2014,
+		"typescript": false,
+		"description": "Modern client-side JavaScript framework"
+	},
+	{
+		"name": "Aurelia",
+		"usage": "frontend",
+		"difficulty": "hard",
+		"popularity": "low",
+		"firstRelease": 2015,
+		"typescript": false,
+		"description": "Modern JavaScript framework with clean architecture"
+	},
+	{
+		"name": "Sails.js",
+		"usage": "backend",
+		"difficulty": "medium",
+		"popularity": "low",
+		"firstRelease": 2012,
+		"typescript": false,
+		"description": "MVC framework for Node.js inspired by Ruby on Rails"
+	},
+	{
+		"name": "Riot.js",
+		"usage": "frontend",
+		"difficulty": "easy",
+		"popularity": "low",
+		"firstRelease": 2013,
+		"typescript": false,
+		"description": "Simple and elegant component-based UI library"
+	},
+	{
+		"name": "Stimulus",
+		"usage": "frontend",
+		"difficulty": "easy",
+		"popularity": "low",
+		"firstRelease": 2018,
+		"typescript": false,
+		"description": "Modest JavaScript framework for HTML you already have"
+	}
+]

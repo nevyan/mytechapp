@@ -1,0 +1,114 @@
+@use '@angular/material' as mat;
+
+$my-theme: (
+  color: (
+    primary: mat.$azure-palette,
+    tertiary: mat.$blue-palette,
+  ),
+  typography: Roboto,
+  density: 0,
+);
+
+
+html {
+  @include mat.theme($my-theme);
+
+  @include mat.select-overrides((
+    panel-background-color: white,
+    enabled-trigger-text-color: green,
+  ));
+
+  @include mat.progress-spinner-overrides((
+    active-indicator-color: #008080,
+  ));
+}
+
+body {
+  color-scheme: light;
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+.form-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  font-family: sans-serif;
+  color: #333;
+
+  h1, h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #EEF2F2;
+    font-size: 1rem;
+    box-sizing: border-box;
+
+    &:disabled {
+      background-color: #e9ecef;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border: 1px solid;
+  transition: background-color 0.3s;
+}
+
+.button-primary {
+  background-color: #008080;
+  color: white;
+  border-color: #008080;
+
+  &:not(:disabled):hover {
+    background-color: #006666;
+  }
+
+  &:disabled {
+    background-color: #a9a9a9;
+    border-color: #a9a9a9;
+    cursor: not-allowed;
+  }
+}
+
+.button-secondary {
+  background-color: white;
+  color: #008080;
+  border-color: #008080;
+
+  &:hover {
+    background-color: #f0fafa;
+  }
+}

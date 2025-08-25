@@ -1,0 +1,58 @@
+<div class="form-container">
+  <a class="return-link" routerLink="/technology-list">← RETURN TO MAIN PAGE</a>
+
+  <h1>Create Technology</h1>
+
+  <form [formGroup]="technologyForm" (ngSubmit)="createTechnology()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" type="text" formControlName="name" placeholder="Angular">
+    </div>
+
+    <div class="form-group">
+      <label for="usage">Usage</label>
+      <select id="usage" formControlName="usage">
+        <option value="frontend">Front-end</option>
+        <option value="backend">Back-end</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="difficulty">Difficulty</label>
+      <select id="difficulty" formControlName="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="popularity">Popularity</label>
+      <select id="popularity" formControlName="popularity">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="firstRelease">First release</label>
+      <input id="firstRelease" type="number" formControlName="firstRelease" placeholder="2010">
+    </div>
+
+    <div class="form-group">
+      <label for="typescript">Typescript</label>
+      <select id="typescript" formControlName="typescript">
+        <option [ngValue]="true">Yes</option>
+        <option [ngValue]="false">No</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea id="description" formControlName="description" placeholder="Full-featured framework for building complex web applications" rows="4"></textarea>
+    </div>
+
+    <button type="submit" class="button button-primary" [disabled]="technologyForm.invalid">Create</button>
+  </form>
+</div>
